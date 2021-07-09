@@ -4,7 +4,6 @@ This repository is a tutorial for beginners who want to learn how to develop end
 ## Project Structure
 ```bash
 machine_learning_based_calculator
-├── README.md
 ├── file_operations
 │   ├── __init__.py
 │   └── file_handlers.py
@@ -38,6 +37,7 @@ machine_learning_based_calculator
 │       └── server_request_handler.js
 ├── templates
 │   └── main_page.html
+├── README.md
 ├── substruction_model_creator.py
 ├── summation_model_creator.py
 └── web_application_backend.py
