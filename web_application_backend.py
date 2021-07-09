@@ -33,7 +33,7 @@ class SummationMachineLearningModelAPI(MethodView):
             msg = "422", 422
         else:
             try:
-                print("try")
+                print("creating x_test")
                 number1 = request.form['number1']
                 number2 = request.form['number2']
                 features_data = [[number1, number2]]
@@ -44,7 +44,46 @@ class SummationMachineLearningModelAPI(MethodView):
                                                            'summation_machine_learning_model.pickle'
                 pickle_handler = PickleHandler()
                 summation_machine_learning_model = pickle_handler.load_object(summation_model_path)
-                print("making prediction")
+                print("making a prediction")
+                prediction = summation_machine_learning_model.predict(x_test)[0]
+                prediction = round(prediction, 2)
+                print(prediction)
+                msg = jsonify({"prediction": prediction}), 200
+            except Exception as ex:
+                print("Exception : " + str(ex))
+                msg = "Something went wrong!", 500
+
+        return msg
+
+
+class SubstructionMachineLearningModelAPI(MethodView):
+
+    def get(self):
+        return "Welcome to Substruction Machine Learning Model API!", 200
+
+    def post(self):
+        print("SubstructionMachineLearningModelAPI POST Method")
+        msg = None
+
+        cond1 = "number1" not in request.form
+        cond2 = "number2" not in request.form
+
+        if cond1 or cond2:
+            msg = "422", 422
+        else:
+            try:
+                print("creating x_test")
+                number1 = request.form['number1']
+                number2 = request.form['number2']
+                features_data = [[number1, number2]]
+                x_test = pd.DataFrame(features_data, columns=['Number1', 'Number2'])
+                print("loading substruction machine learning model")
+                working_directory = os.getcwd()
+                substruction_model_path = working_directory + '/machine_learning_models/' \
+                                                              'substruction_machine_learning_model.pickle'
+                pickle_handler = PickleHandler()
+                summation_machine_learning_model = pickle_handler.load_object(substruction_model_path)
+                print("making a prediction")
                 prediction = summation_machine_learning_model.predict(x_test)[0]
                 prediction = round(prediction, 2)
                 print(prediction)
@@ -60,4 +99,6 @@ main_page_sender_view = MainPageSenderAPI.as_view('main_page_sender_api')
 app.add_url_rule('/', view_func=main_page_sender_view, methods=['GET'])
 summation_machine_learning_model_view = SummationMachineLearningModelAPI.as_view('summation_machine_learning_model_api')
 app.add_url_rule('/summation', view_func=summation_machine_learning_model_view, methods=['POST', 'GET'])
+substruction_machine_learning_model_view = SubstructionMachineLearningModelAPI.as_view('substruction_machine_learning_model_api')
+app.add_url_rule('/substruction', view_func=substruction_machine_learning_model_view, methods=['POST', 'GET'])
 app.run(debug=True)
