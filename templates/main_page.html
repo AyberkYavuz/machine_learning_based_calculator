@@ -33,7 +33,7 @@
             <label for="first_number">First Number</label>
           </div>
           <div class="col s4 center-align">
-            <button class="btn-floating btn-large waves-effect blue">
+            <button id="add_button" class="btn-floating btn-large waves-effect blue" onsubmit="return false;">
               <i class="material-icons">add</i>
             </button>
           </div>
@@ -88,26 +88,10 @@
     </div>
   </footer>
 
-
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/static/js/materialize.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.dropdown-button').dropdown({
-        constrainWidth: false,
-        hover: true,
-        belowOrigin: true,
-        alignment: 'left'
-      });
-
-      // JAVASCRIPT START HERE //
-
-
-
-
-    });
-  </script>
+  <script type="text/javascript" src="/static/js/server_request_handler.js"></script>
 </body>
 
 
