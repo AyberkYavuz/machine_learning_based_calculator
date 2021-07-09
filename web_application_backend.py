@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from flask.views import MethodView
-from helper.application_helpers import BackendHelper
+from helpers.application_helpers import BackendHelper
 
 app = Flask(__name__)
 app.secret_key = BackendHelper.create_random_aplhanumeric_string()
