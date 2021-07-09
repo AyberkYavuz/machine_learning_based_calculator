@@ -14,6 +14,7 @@ $("#add_button").click(function(e) {
               data : {'number1':first_number_value, 'number2': second_number_value},
               success: function(response) {
                 console.log(response);
+                Materialize.toast('Summation Prediction: ' + response['prediction'].toString(), 5000)
               },
               error: function(error) {
                 console.log(error);
