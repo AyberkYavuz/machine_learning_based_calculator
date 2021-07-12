@@ -6,7 +6,7 @@ from helpers.application_helpers import RegressionHelper
 from file_operations.file_handlers import PickleHandler
 
 working_directory = os.getcwd()
-substraction_data_path = working_directory + '/machine_learning_data/substruction.csv'
+substraction_data_path = working_directory + '/machine_learning_data/subtraction.csv'
 
 print("reading substraction data")
 substruction_data = pd.read_csv(substraction_data_path, delimiter=",")
@@ -29,5 +29,5 @@ RegressionHelper.show_regression_model_metrics(substruction_machine_learning_mod
 
 print("Saving substruction machine learning model")
 pickle_handler = PickleHandler()
-model_path = working_directory + '/machine_learning_models/substruction_machine_learning_model.pickle'
+model_path = working_directory + '/machine_learning_models/subtraction_machine_learning_model.pickle'
 pickle_handler.save_object(model_path, substruction_machine_learning_model)

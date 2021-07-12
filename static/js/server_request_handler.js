@@ -35,10 +35,10 @@ $("#add_button").click(function(e) {
     request_server(first_number_value, second_number_value, url);
 });
 
-$("#substruction_button").click(function(e) {
+$("#subtraction_button").click(function(e) {
     e.preventDefault(); // prevents page refreshing
     var first_number_value = $("#first_number_subtraction").val();
     var second_number_value = $("#second_number_subtraction").val();
-    var url = "/substruction";
+    var url = "/subtraction";
     request_server(first_number_value, second_number_value, url);
 });
