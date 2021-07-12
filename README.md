@@ -11,10 +11,10 @@ machine_learning_based_calculator
 │   ├── __init__.py
 │   └── application_helpers.py
 ├── machine_learning_data
-│   ├── substruction.csv
+│   ├── subtraction.csv
 │   └── summation.csv
 ├── machine_learning_models
-│   ├── substruction_machine_learning_model.pickle
+│   ├── subtraction_machine_learning_model.pickle
 │   └── summation_machine_learning_model.pickle
 ├── static
 │   ├── css
@@ -38,7 +38,7 @@ machine_learning_based_calculator
 ├── templates
 │   └── main_page.html
 ├── README.md
-├── substruction_model_creator.py
+├── subtraction_model_creator.py
 ├── summation_model_creator.py
 └── web_application_backend.py
 ```
@@ -59,14 +59,14 @@ is the javascript application which enables interactions between user interface 
 ### web_application_backend.py
 [web_application_backend.py](https://github.com/AyberkYavuz/machine_learning_based_calculator/blob/master/web_application_backend.py)
 is the web application's backend that renders main_page.html and serves trained summation machine learning model
-and trained substruction machine learning model as APIs.
+and trained subtraction machine learning model as APIs.
 
 ### summation_model_creator.py
 [summation_model_creator.py](https://github.com/AyberkYavuz/machine_learning_based_calculator/blob/master/summation_model_creator.py)
 uses [summation.csv](https://github.com/AyberkYavuz/machine_learning_based_calculator/blob/master/machine_learning_data/summation.csv) 
 in order to produce [trained summation machine learning model](https://github.com/AyberkYavuz/machine_learning_based_calculator/blob/master/machine_learning_models/summation_machine_learning_model.pickle).
 
-### substruction_model_creator.py
-[substruction_model_creator.py](https://github.com/AyberkYavuz/machine_learning_based_calculator/blob/master/substruction_model_creator.py)
-uses [substruction.csv](https://github.com/AyberkYavuz/machine_learning_based_calculator/blob/master/machine_learning_data/substruction.csv) 
-in order to produce [trained substruction machine learning model](https://github.com/AyberkYavuz/machine_learning_based_calculator/blob/master/machine_learning_models/substruction_machine_learning_model.pickle).
+### subtraction_model_creator.py
+[subtraction_model_creator.py](https://github.com/AyberkYavuz/machine_learning_based_calculator/blob/master/subtraction_model_creator.py)
+uses [subtraction.csv](https://github.com/AyberkYavuz/machine_learning_based_calculator/blob/master/machine_learning_data/subtraction.csv) 
+in order to produce [trained subtraction machine learning model](https://github.com/AyberkYavuz/machine_learning_based_calculator/blob/master/machine_learning_models/subtraction_machine_learning_model.pickle).
