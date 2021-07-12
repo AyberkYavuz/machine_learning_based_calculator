@@ -44,7 +44,7 @@ machine_learning_based_calculator
 ```
 
 ## Usage
-[Machine Learning Based Calculator Usage](https://www.youtube.com/watch?v=xrv5PvmjOro&ab_channel=AyberkYavuz)
+[Machine Learning Based Calculator Usage](https://www.youtube.com/watch?v=T8cUrrp0HFA&t=11s&ab_channel=AyberkYavuz)
 
 ## Application Files Descriptions
 
